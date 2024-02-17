@@ -1,10 +1,10 @@
-NAME	=	ft_printf.a
+NAME	=	libftprintf.a
 
 INCLUDE =	ft_printf.h
 
 CFLAGS	=	-Wall -Wextra -Werror
 
-SRC		=	ft_printf.c	internal_ft_printf.c
+SRC		=	ft_printf.c	internal_ft_printf.c ft_out.c
 
 OBJ		=	$(SRC:%.c=%.o)
 
