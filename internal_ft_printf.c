@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   internal_ft_printf.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sgoremyk <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/12 14:40:31 by sgoremyk          #+#    #+#             */
+/*   Updated: 2024/03/12 14:42:06 by sgoremyk         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 char	ft_printu(size_t num, size_t base, char cap)
@@ -19,10 +31,10 @@ char	ft_printu(size_t num, size_t base, char cap)
 char	ft_printx(size_t num, char ch)
 {
 	if (ch == 'X')
-		return(ft_printu(num, 16, 'A'));
+		return (ft_printu(num, 16, 'A'));
 	else if (ch == 'x')
-		return(ft_printu(num, 16, 'a'));
-	else if (!num)
+		return (ft_printu(num, 16, 'a'));
+	else if (!num && (ch == 'x' || ch == 'X'))
 	{
 		write(1, "(nil)", 5);
 		return (5);
@@ -30,7 +42,7 @@ char	ft_printx(size_t num, char ch)
 	else
 	{
 		write(1, "0x", 2);
-		return(ft_printu(num, 16, 'a') + 2);
+		return (ft_printu(num, 16, 'a') + 2);
 	}
 	return (0);
 }
