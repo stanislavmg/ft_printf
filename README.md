@@ -36,7 +36,7 @@ Handle the following conversions:
 git clone https://github.com/stanislavmg/ft_printf.git
 ```
 
-1. **Compile the project**:
+2. **Compile the project**:
 
 ```bash
 make
