@@ -30,14 +30,20 @@ Handle the following conversions:
 
 ## Getting Started
 
-1. **Clone the repository**:
+1. **Clone the repository:**
 
 ```bash
 git clone https://github.com/stanislavmg/ft_printf.git
 ```
 
-2. **Compile the project**:
+2. **Compile the project:**
 
 ```bash
 make
+```
+3. **Include the header file and compile your project with** `libftprintf.a`**:**
+
+```c
+#include "/path/to/ft_printf.h"
+gcc main.c libftprintf.a -o your_program
 ```
